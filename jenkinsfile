@@ -41,3 +41,26 @@ ansiblePlaybook credentialsId: 'edf29c56-6626-4ce1-a40e-4d6a98e6afea', disableHo
 }
 }
 }
+/*
+node {
+    
+    stage('SCM') { 
+        git credentialsId: '7459d301-ec0a-4c8d-819d-10d9ede9c968', url: 'https://github.com/CHANDRADCS/test-maven.git'
+        
+    }
+    stage('install') {
+        sh 'mvn install'
+    }
+    stage('test') {
+        sh 'mvn test'
+    }
+    stage('compile') {
+        sh 'mvn compile'
+    }
+    stage('package') {
+        sh 'mvn package'
+    }
+    
+}
+
+*/
